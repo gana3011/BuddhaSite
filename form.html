@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BuddhaGrace</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="header-placeholder"></div>
+    <form id="contact-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" placeholder="Enter your name" required><br><br>
+    
+            <label for="email">Email:</label>
+            <input type="email" id="email" placeholder="Enter your email" required><br><br>
+            <div class="message" style="display:none;"></div>
+            <div class="product">
+            <label for="product">Product:</label><br><br>
+            <input type="radio" name="product" value="Sitting Buddha Statue" id="sitting">Sitting Buddha<br>
+            <input type="radio" name="product" value="Standing Buddha Statue" id="standing">Standing Buddha<br>
+            <input type="radio" name="product" value="Laughing Buddha" id="laughing">Laughing Buddha<br>
+            <input type="radio" name="product" value="Angry Buddha Statue" id="angry">Angry Buddha<br>
+            <input type="radio" name="product" value="Teaching Buddha Statue" id="teaching">Teaching Buddha<br><br>
+            </div> 
+            <button type="submit">Submit</button>
+        </form>
+        <div id="footer-placeholder"></div>
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+    <script src="app.js"></script>
+</body>
