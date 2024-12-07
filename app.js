@@ -173,7 +173,7 @@ document.addEventListener('DOMContentLoaded', function() {
             try {
                 emailjs.send('service_iu5wbdm', 'template_5g3srlj', emailParams) 
                     .then(function(response) {
-                        alert('Email sent successfully');
+                        alert('Thank you for your patronage! Please check your mail');
                         contactForm.reset(); 
                         message.style.display = "none"; 
                         window.location.href = "index.html"
