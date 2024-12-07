@@ -84,7 +84,7 @@ a{
 .hero-text button{
     border: none;
     font-size: 22px;
-    font-weight: 600;
+    font-weight: 700;
     font-family: "Merriweather Sans", serif;
     cursor: pointer;
     background-color: transparent;
@@ -351,6 +351,31 @@ section{
 .footer-bottom a:hover {
     color: #5e8d83;
 }
+
+.contact-details{
+    display: flex;
+    flex-direction: column;
+}
+
+.support .contact-details .chat-btn{
+    border: none;
+    font-size: 18px;
+    font-weight: 700;
+    font-family: "Merriweather Sans", serif;
+    cursor: pointer;
+    background-color: transparent;
+    color:#114538;
+    align-self: flex-start;
+    margin-left: 15px;
+    text-decoration: underline;
+    text-decoration-thickness: 1.5px;
+    text-decoration-color: #5e8d83;
+}
+
+.support .contact-details .chat-btn:hover{
+    color: #5e8d83;
+}
+
 
 form{
     display: flex;
