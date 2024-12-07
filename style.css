@@ -365,11 +365,10 @@ section{
     cursor: pointer;
     background-color: transparent;
     color:#114538;
-    align-self: flex-start;
-    margin-left: 15px;
     text-decoration: underline;
     text-decoration-thickness: 1.5px;
     text-decoration-color: #5e8d83;
+    margin:0px -5px;
 }
 
 .support .contact-details .chat-btn:hover{
@@ -420,4 +419,123 @@ form button{
 
 .message{
     color:red;
+}
+
+/* Mobile Responsiveness */
+@media screen and (max-width: 768px) {
+    /* Header Adjustments */
+    header {
+        flex-direction: column;
+        text-align: center;
+        padding: 10px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    nav li {
+        margin: 5px 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    /* Hero Section */
+    .hero {
+        height: 50vh;
+        background-position: center;
+    }
+
+    .hero-text h2 {
+        font-size: 32px;
+        text-align: center;
+    }
+
+    .hero-text p {
+        font-size: 18px;
+        text-align: center;
+    }
+
+    .hero-text button {
+        max-width: 100%;
+        align-self: center;
+    }
+
+    /* Cards */
+    .card-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 90%;
+        margin: 15px 0;
+    }
+
+    /* Products Slider */
+    .slider-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .slider {
+        width: 90%;
+        height: 300px;
+    }
+
+    .list img{
+        object-fit: contain;
+    }
+
+    .product-description {
+        width: 90%;
+        margin-left: 0;
+        align-items: center;
+        text-align: center;
+    }
+
+    .product-description p {
+        width: 100%;
+    }
+
+    /* Reviews */
+    .review {
+        width: 90%;
+        margin: 10px;
+    }
+
+    /* Form */
+    form {
+        width: 90%;
+        padding: 20px;
+        margin: 30px auto;
+    }
+
+    /* Support/Footer */
+    .support p {
+        text-align: center;
+    }
+
+    .contact-details {
+        align-items: center;
+    }
+}
+
+/* Ensure images are responsive */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Improve touch targets on mobile */
+@media (max-width: 768px) {
+    button, 
+    .dots li,
+    nav a,
+    .chat-btn {
+        min-height: 30px;
+        min-width: 30px;
+        padding: 10px;
+    }
 }
