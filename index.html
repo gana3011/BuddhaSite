@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Budha</title>
+    <title>BuddhaGrace</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
@@ -12,24 +12,47 @@
 </head>
 <body>
     <header>
-        <h1>Budha Statues</h1>
+        <h1>BuddhaGrace</h1>
         <nav>
             <ul>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Products</a></li>
-                <li><a href="#">Reviews</a></li>
-                <li><a href="#">Support</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#reviews">Reviews</a></li>
+                <li><a href="#support">Support</a></li>
             </ul>
         </nav>
     </header>
+    <div id="form-container" style="display: none;">
+        <form id="contact-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" placeholder="Enter your name" required><br><br>
+    
+            <label for="email">Email:</label>
+            <input type="email" id="email" placeholder="Enter your email" required><br><br>
+            <div class="message" style="display:none;"></div>
+            <div class="product">
+            <label for="product">Product:</label><br><br>
+            <input type="radio" name="product" value="Sitting Buddha Statue" id="sitting">Sitting Buddha<br>
+            <input type="radio" name="product" value="Standing Buddha Statue" id="standing">Standing Buddha<br>
+            <input type="radio" name="product" value="Laughing Buddha" id="laughing">Laughing Buddha<br>
+            <input type="radio" name="product" value="Angry Buddha Statue" id="angry">Angry Buddha<br>
+            <input type="radio" name="product" value="Teaching Buddha Statue" id="teaching">Teaching Buddha<br><br>
+            </div>
+
+    
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+    <div class="webpage-container">
     <div class="hero overlay">
         <div class="hero-text">
             <h2>Elevate Your Space with Sacred Beauty.</h2>
             <p>Transform your home or workspace into a sanctuary of calm with our exquisite Buddha statues.<br> Each piece is a symbol of enlightenment, expertly crafted to inspire and soothe.</p>
-            <div>cta</div>
+            <button id="get-started-btn">Get Started</button>
         </div>
     </div>
-        <section class="about">
+
+        <section class="about" id="about">
             <h2>Why Choose Us?</h2>
             <div class="card-container">
             <!-- <img src="7070741.jpg" alt="picture of lotus" class="lotus-img"> -->
@@ -59,31 +82,78 @@
             </div>
             </div>
         </section>
-        <section class="products">
-            <h2>Products</h2>
-            <div class="slider-wrapper">
-                <div class="slider-nav">
-                    <a href="#slide-1">Sitting</a>
-                    <a href="#slide-2">Standing</a>
-                    <a href="#slide-3">Laughing</a>
-                    <a href="#slide-4">Angry</a>
-                    <a href="#slide-5">Teaching</a>
+        <section class="products" id="products">
+            <h2>Our Buddha Statues</h2>
+            <div class="slider-container">
+                <div class="buttons">
+                    <button id="prev"><</button>
+                    <button id="next">></button>
                 </div>
                 <div class="slider">
-                    <img id="slide-1" src="img/sitting.jpg" data-caption="Transform your space into a haven of peace and serenity with this exquisite Sitting Buddha statue. Skillfully handcrafted with precision and care, this statue embodies the essence of meditation and inner calm." alt="">
-                    <img id="slide-2" src="img/standing.jpg" data-caption="Elevate your surroundings with the majestic presence of the Standing Buddha statue. This masterpiece exudes strength, serenity, and compassion, serving as a beacon of positivity and balance." alt="">
-                    <img id="slide-3" src="img/laughing.jpg" data-caption="Bring happiness and good fortune into your life with the delightful Laughing Buddha statue. Known for its cheerful energy and abundance symbolism, this statue is a perfect addition to any space." alt="">
-                    <img id="slide-4" src="img/angry.jpg" data-caption="Invoke strength and determination with the powerful Angry Buddha statue. This unique depiction symbolizes the fierce protection of righteousness and the eradication of negativity, embodying a dynamic spiritual energy." alt="">
-                    <img id="slide-5" src="img/teaching.jpg" data-caption="Embrace wisdom and enlightenment with the serene Teaching Buddha statue. This meaningful depiction represents the sharing of knowledge and the path to spiritual growth." alt="">
+                    <div class="list">
+                        <div class="item">
+                            <img src="img/sitting.jpg" alt="Sitting Buddha Statue">
+                        </div>
+                        <div class="item">
+                            <img src="img/standing.jpg" alt="Standing Buddha Statue">
+                        </div>
+                        <div class="item">
+                            <img src="img/laughing.jpg" alt="Laughing Buddha Statue">
+                        </div>
+                        <div class="item">
+                            <img src="img/angry.jpg" alt="Angry Buddha Statue">
+                        </div>
+                        <div class="item">
+                            <img src="img/teaching.jpg" alt="Teaching Buddha Statue">
+                        </div>
+                    </div>
+
+                    <ul class="dots">
+                        <li class="active"></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
                 </div>
-                <div class="caption">
-                    <p>Transform your space into a haven of peace and serenity with this exquisite Sitting Buddha statue. Skillfully handcrafted with precision and care, this statue embodies the essence of meditation and inner calm.</p>
-                    <button>Shop Now</button>
+                <div class="product-description" id="product-desc">
+                    <h3 id="product-title">Sitting Buddha Statue</h3>
+                    <p id="product-text">Transform your space into a haven of peace and serenity with this exquisite Sitting Buddha statue. Skillfully handcrafted with precision and care, this statue embodies the essence of meditation and inner calm.</p>
+                    <strong>Material: </strong><p id="product-material">Resin</p>
+                    <strong>Size: </strong><p id="product-size">18cm</p>
+                    <button id="buy-now-btn">Buy now</button>
                 </div>
             </div>
         </section>
+
+        <section class="reviews" id="reviews">
+            <h2>Word from our Customers</h2>
+            <div class="review">
+                <p>"Absolutely stunning craftsmanship! The Buddha statue has brought so much peace and positive energy to my home. It's even more beautiful than I imagined!"</p>
+                <h4>-Sophia R</h4>
+            </div>
+            <div class="review">
+                <p>"The attention to detail on the statue is incredible. I’ve placed it in my meditation corner, and it has truly transformed the space into a sanctuary."</p>
+                <h4>-Liam P</h4>
+            </div>
+            <div class="review">
+                <p>"I was impressed by the quick delivery and secure packaging. The statue is exactly as described and looks amazing in my living room. Highly recommend!"</p>
+                <h4>-Aarav S</h4>
+            </div>
+        </section>
+    </div>
+        <footer class="support" id="support">
+            <h2>Contact Us</h2>
+            <p><strong>Email:</strong>support@buddhastatues.com</p>
+            <p><strong>Phone:</strong>+1 (800) 123-4567</p>
+            <div class="footer-bottom">
+                <p>&copy; 2024 [BuddhaGrace]. All Rights Reserved. | <a href="#privacy-policy">Privacy Policy</a> | <a href="#terms-of-service">Terms of Service</a></p>
+            </div>
+            </footer>
         
-        
+<script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
     <script src="app.js"></script> 
 </body>
 </html>
